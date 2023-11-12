@@ -13,4 +13,5 @@ add_executable(Assignment3
         QueueADT.cpp
         Queue.h
         Queue.cpp
-        Node.h)
+        Node.h
+        Customer.h)

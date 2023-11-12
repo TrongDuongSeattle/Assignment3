@@ -38,28 +38,40 @@ template<class T>
 bool Queue<T>::isFull() {
     return count >= 100;
 }
+/**
+ * removes
+ * @tparam T
+ * @return
+ */
 template <class T>
 T& Queue<T>::dequeue() {
     // m_pHead = m_pHead->next; leaves a dangling ptr
-    int returnData = -1;
-
     if(!isEmpty()) {
-        Node<T>* removeNode = m_pHead;
-        returnData = m_pHead->getData();
+        Node<T> *removeNode = m_pHead;
+        //T& returnData = m_pHead->getData();
+        T *obj  = new T(m_pHead->getData());
         m_pHead = m_pHead->getNext();
         if (m_pHead == nullptr) {
-            m_pTail == nullptr;
+            m_pTail = nullptr;
         }
         delete removeNode;
+        count--;
+        return *obj;
+    } else {
+        throw std::runtime_error("FUCK C++");
     }
-    count--;
-    return returnData;
 }
 
 template <class T>
-T &Queue<T>::peek() {
-    T data = m_pTail->getData();
-    return data;
+T& Queue<T>::peek() { //supposed return an adress.
+    /**
+     * stores local variable
+     * hey heres a special variable heres adresss
+     * peek closes
+     * data lost
+     */
+     T& data = m_pHead->getData();//mebbe head
+     return data;
 }
 
 template <class T>

@@ -10,11 +10,11 @@ class Node {
 public:
     Node(T data) : m_data(data), m_pNext(nullptr) {}
 
-    T getData() { return m_data; }
+    T& getData() { return m_data; }
 
     void setData(T data) { m_data = data; }
 
-    Node<T> *getNext() { return m_pNext; }
+    Node<T>* getNext() { return m_pNext; }
 
     void setNext(Node<T> *next) { m_pNext = next; }
 

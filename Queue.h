@@ -24,7 +24,7 @@ private:
     Node<T>* m_pTail;
 };
 
-static void functionName(params){}
+//static void functionName(params){}
 
 
 

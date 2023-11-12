@@ -3,4 +3,17 @@
 //
 
 #include "simulation.h"
+/**
+ * dequeue
+ */
+void simulation::processCustomer() {
 
+}
+
+int simulation::processTransactionTime() {
+    return 0;
+}
+
+void simulation::printStatistics() {
+
+}

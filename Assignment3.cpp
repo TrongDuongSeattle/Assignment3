@@ -2,10 +2,10 @@
 #include <fstream>
 #include "Queue.h"
 #include "Queue.cpp"
-//#include "Customer.h"
-//#include "Simulation.h"
+#include "Customer.h"
+#include "Simulation.h"
 
-//use read customers as a statick function in customer class.
+//use read customers as a static function in customer class.
 
 int main()
 {
@@ -14,11 +14,23 @@ int main()
 //    std::cout << "Processing Customers:" << std::endl;
 //    bankSimulation.processCustomers(bankCustomers);     // Simulates the teller serving the customers in the queue
 //    bankSimulation.printStatistics();                   // Prints out the maximum delay and the average delay
-Queue<int> q;
+Queue<Customer> q;
+Customer Fed(1,1);
+Customer Ryan(2, 2);
+Customer Shyan(3, 3);
+Customer Frankfurter(4,4);
 
-const int x = 1;
 
-q.enqueue(x);
+
+q.enqueue(Fed);
+q.enqueue(Ryan);
+q.enqueue(Shyan);
+q.enqueue(Frankfurter);
+
+std::cout << q.peek() << std::endl;
+q.dequeue();
+std::cout << q.peek() << std::endl;
+q.dequeue();
 std::cout << q.peek() << std::endl;
 q.dequeue();
 std::cout << q.peek() << std::endl;
