@@ -8,10 +8,10 @@ include_directories(.)
 add_executable(Assignment3
         Assignment3.cpp
         QueueADT.h
-        simulation.cpp
-        simulation.h
-        QueueADT.cpp
+        Simulation.h
         Queue.h
         Queue.cpp
         Node.h
-        Customer.h)
+        Customer.h
+        Simulation.cpp
+)

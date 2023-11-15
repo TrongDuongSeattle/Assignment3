@@ -63,7 +63,7 @@ T& Queue<T>::dequeue() {
 }
 
 template <class T>
-T& Queue<T>::peek() { //supposed return an adress.
+T& Queue<T>::peek() {
     /**
      * stores local variable
      * hey heres a special variable heres adresss

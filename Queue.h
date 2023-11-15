@@ -18,6 +18,7 @@ public:
      void print();               //  Prints out the entire queue
      bool isEmpty();             // Check if queue is empty
      bool isFull();              // Check if queue is full
+     int getCount() { return count; }
 private:
     int count = 0;              //directions say 100 is full
     Node<T>* m_pHead;
