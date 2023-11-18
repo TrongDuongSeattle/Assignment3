@@ -1,7 +1,3 @@
-//
-// Created by T D  on 11/6/23.
-//
-
 #ifndef ASSIGNMENT3_NODE_H
 #define ASSIGNMENT3_NODE_H
 

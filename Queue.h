@@ -1,7 +1,3 @@
-//
-// Created by T D  on 11/6/23.
-//
-
 #ifndef ASSIGNMENT3_QUEUE_H
 #define ASSIGNMENT3_QUEUE_H
 
@@ -24,9 +20,6 @@ private:
     Node<T>* m_pHead;
     Node<T>* m_pTail;
 };
-
-//static void functionName(params){}
-
 
 
 

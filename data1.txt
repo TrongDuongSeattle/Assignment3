@@ -5,7 +5,7 @@ wait is 5
 0 5
 wait is 10
 ...wait now 5
-5 10
+5 10 : this guy waits 5 minutes
 wait is 15
 5 10
 wait is 25
@@ -25,3 +25,35 @@ wait is 29
 15 3
 15 10
 25 20
+time        customers       duration of transaction         wait time
+0         process 1st guy            5                                        0, 0 1st guy has no wait
+1
+2
+3
+4
+5        process 2nd guy            5                   dequeue              0, 5, 5            2nd guy has been waiting 5 mins, 3rd and 4th guy have just arrived
+6
+7
+8
+9
+10       process 3rd guy            10                  dequeue              5, 5               3 and 4th guy have been waiting 5 mins
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20      process 4th guy             10                  dequeue                                 4th guy has been waiting 15 mins
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30

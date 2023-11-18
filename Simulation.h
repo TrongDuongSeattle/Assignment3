@@ -1,6 +1,3 @@
-//
-// Created by T D  on 11/6/23.
-//
 #include <fstream>
 #include "Queue.h"
 #include "Customer.h"
