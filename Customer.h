@@ -1,6 +1,3 @@
-//
-// Created by Leafylotus on 11/11/2023.
-//
 #include <iostream>
 #ifndef ASSIGNMENT3_CUSTOMER_H
 #define ASSIGNMENT3_CUSTOMER_H
@@ -14,6 +11,8 @@ public:
     int getArrivalTime() { return arriveTime; }
     int getTransactionTime() { return transactionTime; }
 
+    void setArrivalTime(int newArrivalTime) { arriveTime = newArrivalTime; }
+
 private:
     int arriveTime;
     int transactionTime;
@@ -22,7 +21,6 @@ private:
 static std::ostream& operator<<(std::ostream& os, Customer& customer) {
     return os << "Customer arrival Time: " << customer.getArrivalTime() << " Transaction Duration: " << customer.getTransactionTime();
 }
-
 
  static Queue<Customer> readCustomers() {
     Queue<Customer> fed;
