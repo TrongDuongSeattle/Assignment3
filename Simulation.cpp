@@ -17,24 +17,37 @@ void Simulation::processCustomers(Queue<Customer> bankCustomers) {
         }
     }
 }
+
+
 /**
  * time of arrival
  *  if time of arrival is same as previous
  *      set to 0;
  * duration of transaction
  *
+ * elapsedTime: sum of ALL transaction time
+ *      increment
+ *
+ *
+ *
  * @param customer
+ *
+ * 0    5
+ * 0    5
+ * 5    10
+ * 5    10
+
  */
 void Simulation::processTransaction(Customer customer) {
-    maxDelay = elapsedTime - customer.getArrivalTime();
-
-    elapsedTime += customer.getTransactionTime() - ;
-    currentDelay += maxDelay;
+    maxDelay = elapsedTime - customer.getTransactionTime();
+    elapsedTime += customer.getTransactionTime();
+    currentDelay += customer.getArrivalTime() - customer.getArrivalTime();
     averageDelay = currentDelay * 1.0 / customerCount;
 }
 
 void Simulation::printStatistics() {
     std::cout << "Max delay " << maxDelay << std::endl;
     std::cout << "Average delay: " << averageDelay  << std::endl;
+    std::cout << "Current delay: " << currentDelay  << std::endl;
 }
 
